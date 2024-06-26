@@ -7,16 +7,14 @@
     "react-multi-carousel": "^2.8.5",
     "swiper": "^8.1.6" 
   },
- "scripts": {
-  "build": "export NODE_OPTIONS=--openssl-legacy-provider && cd frontend && npm run build && cd frontend && npm install && npm run build",
-  "start": "export NODE_OPTIONS=--openssl-legacy-provider && cd frontend && npm start",
-  "backend": "cd backend && npm run dev",
-  "server": "nodemon backend/server.js",
-  "frontend": "cd frontend && npm start",
-  "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-  "start-backend": "cd backend && npm start"
-},
-
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "server": "nodemon backend/server.js",
+    "frontend": "cd frontend && npm start",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "build": "cd frontend && npm install && npm run build",
+    "start-backend": "cd backend && npm start"
+  },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "concurrently": "^7.6.0"
