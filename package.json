@@ -8,9 +8,10 @@
   },
   "scripts": {
     "backend": "cd backend && npm run dev",
+    "server": "nodemon backend/server.js",
     "frontend": "cd frontend && npm start",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "cd frontend && npm run build && cd .. && npm run start-backend",
+    "build": "cd frontend && npm run start && cd .. && npm run start-backend",
     "start-backend": "cd backend && npm start"
   },
   "devDependencies": {
