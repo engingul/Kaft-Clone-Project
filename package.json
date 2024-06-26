@@ -9,10 +9,11 @@
   "scripts": {
     "backend": "cd backend && npm run dev",
     "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
     "frontend": "cd frontend && npm start",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
-    "build": "cd frontend && npm run build",
-    "start-backend": "cd backend && npm start"
+    "build": "cd frontend && npm start",
+    "start-backend": "cd backend && npm run dev"
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
