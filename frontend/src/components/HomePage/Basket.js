@@ -2,23 +2,24 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/Navbar2';
 import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
-import { useCart } from '../../context/CartContex'; 
-import { Link } from 'react-router-dom';
-import Kargo from '../HomePage/Cargo';
-
-import '../../Css/fonts.css';
-import '../../Css/Basket.css';
-
+// Kullanılan Resimler
 import canta from '../../images/bag.webp';
 import bere from '../../images/beanie.webp';
 import ceket from '../../images/jacket.webp';
 import atlet from '../../images/tank.webp';
 import short from '../../images/short_man.webp';
 import pantolon from '../../images/pant_man.webp';
+import '../../Css/fonts.css';
+import '../../Css/Basket.css'; // Yeni eklenen CSS dosyası
+// import required modules
+import { Autoplay } from 'swiper/modules';
 import tasarımlarımızagözat from '../../images/tasarımlarımızagözat.png';
+import { useCart } from '../../context/CartContex'; // Kart konteksinin doğru dosya adı
+import { Link } from 'react-router-dom';
+import Kargo from '../HomePage/Cargo'
 
 function Basket() {
   const { cart } = useCart();
@@ -41,6 +42,7 @@ function Basket() {
         );
         setProducts(productDetails);
 
+        // Toplam fiyatı hesapla
         const total = productDetails.reduce((acc, product) => acc + parseFloat(product.price), 0);
         setTotalPrice(total);
       } catch (error) {
@@ -74,7 +76,7 @@ function Basket() {
   };
 
   return (
-    <div style={{ backgroundColor: '#F2F3EF' }}>
+    <div style={{backgroundColor:'#F2F3EF'}}>
       <Navbar />
       <br />
       <br />
